@@ -374,11 +374,10 @@ header.hero .tagline {
 /* ---- ĐẶC BIỆT CHO TRƯỞNG NHÓM (Leader) ---- */
 .leader-card {
     border: 2px solid var(--accent-gold);
+    /* Giữ viền vàng */
     box-shadow: 0 0 25px rgba(244, 194, 13, 0.15);
-    grid-column: 1 / -1;
-    /* Trưởng nhóm nằm riêng 1 hàng (nếu muốn) hoặc để auto */
-    /* Nếu muốn Leader to hơn, bỏ comment dòng dưới */
-    /* max-width: 800px; margin: 0 auto; */
+    /* Giữ hiệu ứng phát sáng */
+    /* grid-column: 1 / -1;  <-- XÓA HOẶC COMMENT DÒNG NÀY LẠI */
 }
 
 .leader-card .img-wrapper {
@@ -781,4 +780,10 @@ header.hero .tagline {
     border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     padding-bottom: 10px;
     margin-top: 30px;
+}
+
+/* ---- FIX LỖI ẢNH LEADER MẤT MẶT ---- */
+.leader-card .img-wrapper img {
+    object-position: top center;
+    /* Neo ảnh lên trên cùng để lấy khuôn mặt */
 }
